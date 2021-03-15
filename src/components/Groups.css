@@ -1,0 +1,15 @@
+.groups{
+    margin-left: 350px;
+}
+.group{
+    margin-bottom: 20px;
+}
+
+.search{
+    display: flex;
+}
+
+.search input {
+    height: 20px;
+    margin-top: 10px;
+}
