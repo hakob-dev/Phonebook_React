@@ -1,1 +1,2 @@
-# react_task_dex
+# Phonebook_React
+after runing the backend, run npm install && npm start
