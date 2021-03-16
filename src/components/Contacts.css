@@ -6,3 +6,7 @@ table, th, td {
 .contacts{
   max-width: 500px;
 }
+
+.error{
+  color: red;
+}

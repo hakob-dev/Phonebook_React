@@ -15,8 +15,17 @@ function Contact(props) {
         <th>{ isEdit ? <input type="text" value={phone_number} onChange={(e)=>setPhone_number(e.target.value)}/> : phone_number}</th>
         { !isEdit ? <th><input type="checkbox" onChange={(e)=> e.target.checked ? props.selectContact(props.id) : props.unSelectContact(props.id)}/></th> : null }
         
-        { isEdit ? <th><button onClick={async ()=>{await updateContact(props.id, {first_name,last_name,phone_number }); setIsEdit(null); props.getData();}}>save</button></th> : null}
-        { isEdit ? <th><button onClick={()=>{setIsEdit(null); setIsLast_name(props.last_name); setFirst_name(props.first_name); setPhone_number(props.phone_number);}}>cancel</button></th> : null}
+        { isEdit ? <th><button onClick={async () => {
+              await updateContact(props.id, {first_name,last_name,phone_number }); 
+              setIsEdit(null); 
+              props.getData();
+          }}>save</button></th> : null}
+        { isEdit ? <th><button onClick={() => {
+              setIsEdit(null);
+              setIsLast_name(props.last_name); 
+              setFirst_name(props.first_name); 
+              setPhone_number(props.phone_number);
+            }}>cancel</button></th> : null}
      </tr>
   );
 }
